@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var saveRouter = require('./routes/save');
+var teishokuRouter = require('./routes/teishoku');
+var saveTeishokuRouter = require('./routes/save_teishoku');
 var app = express();
 
 // view engine setup
@@ -23,6 +25,8 @@ app.use("/public", express.static(__dirname + "/public"));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/save', saveRouter);
+app.use('/teishoku', teishokuRouter);
+app.use('/save_teishoku', saveTeishokuRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

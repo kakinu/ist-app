@@ -13,11 +13,11 @@ var router = express.Router();
 
 //const mysqlconn = mysql.createConnection({
   const mysqlconn = mysql.createPool({
-    host: 'us-cdbr-east-02.cleardb.com', //ここのパラメータはひろさんの環境に合わせて修正してください。
+    host: 'localhost', //ここのパラメータはひろさんの環境に合わせて修正してください。
     port: '3306',
-    user: 'b5d1178c034d3f',
-    password: 'ff3344f4',
-    database: 'heroku_c29948c23ea6290'
+    user: 'root',
+    password: 'pass',
+    database: 'list_app'
 });
 
 
@@ -33,16 +33,16 @@ router.post('/', function(req, res, next) {
 // 内部関数でSQLを処理する。
 mysqlconn.getConnection((err,conn) => {
   conn.query(
-      "insert into sampledata (menu, sex, ages) values(?,?,?)",
-      [req.body.menu, req.body.sex, req.body.ages],
+      "insert into sampledata values(?,?,?)",
+      [data.mode, data.sex, data.ages],
       (error, result, fields) =>{
-        res.send('データが送信されました！！');
-      });
+  });
   // コネクションを使い終わったら必ずreleaseする。
   conn.release();
 });
 
 });
+
 
 
 module.exports = router;

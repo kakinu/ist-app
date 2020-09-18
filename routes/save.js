@@ -33,7 +33,7 @@ router.post('/', function(req, res, next) {
 // 内部関数でSQLを処理する。
 mysqlconn.getConnection((err,conn) => {
   conn.query(
-      "insert into sampledata (menu, sex, ages,creat_at) values(?,?,?,now())",
+      "insert into sampledata (nemu, sex, ages) values(?,?,?)",
       [req.body.menu, req.body.sex, req.body.ages],
       (error, result, fields) =>{
         res.send('データが送信されました！！');

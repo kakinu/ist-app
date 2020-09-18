@@ -1,0 +1,72 @@
+header{
+  text-align: center;
+  border-bottom: solid 3px black;
+}
+
+section.container{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.menu{
+  width: 30%;
+  float: left;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: double 5px #4ec4d3;
+  height: 250px;
+}
+
+.menu p{
+  border-bottom: solid 3px #4ec4d3
+}
+
+.sex{
+  width: 30%;
+  float: left;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: double 5px #4ec4d3;
+  height: 250px;
+}
+
+.sex p{
+  border-bottom: solid 3px #4ec4d3
+}
+.ages{
+  width: 30%;
+  float: left;
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  border: double 5px #4ec4d3;
+  height: 250px;
+}
+
+.ages p{
+    border-bottom: solid 3px #4ec4d3
+}
+
+
+
+label{
+  display: block;
+}
+
+  .decorated-btn {
+    background-color:#4ec4d3;;
+    font-size: 30px;
+    border-radius: 5px;
+    border-bottom: solid 3px #4ec4d3;;
+    box-shadow: 3px 3px 3px gray;
+    transition: 1s;
+    margin-top: px;
+  }
+  
+  .click-down:active {
+    transform: translateY(2px);
+    border-bottom: none;
+  }
+  
+  .decorated-btn:hover {
+    background-color: orange;
+  }

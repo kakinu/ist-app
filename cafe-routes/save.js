@@ -13,7 +13,7 @@ var router = express.Router();
 
 //const mysqlconn = mysql.createConnection({
   const mysqlconn = mysql.createPool({
-    host: 'us-cdbr-east-02.cleardb.com', //ここのパラメータはひろさんの環境に合わせて修正してください。
+    host: 'us-cdbr-east-02.cleardb.com', 
     port: '3306',
     user: 'b5d1178c034d3f',
     password: 'ff3344f4',
